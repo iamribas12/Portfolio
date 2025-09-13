@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
+# Professional Portfolio Website
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features a clean, Apple-inspired design with dark/light mode support and smooth animations.
 
-**URL**: https://lovable.dev/projects/f25756a7-56dc-4dd8-a076-074844e8d5da
+## ✨ Features
 
-## How can I edit this code?
+- **Modern Design**: Clean, professional aesthetic with smooth animations
+- **Responsive**: Fully responsive design that works on all devices
+- **Dark/Light Mode**: Toggle between themes with system preference detection
+- **Interactive Sections**:
+  - Hero section with professional photo and call-to-action
+  - About section with skills grid
+  - Projects showcase with 6 featured projects
+  - Skills section with visual progress indicators
+  - Contact form with validation
+- **Professional Layout**: Navigation, routing, and footer
+- **Performance Optimized**: Fast loading with optimized images and smooth scrolling
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f25756a7-56dc-4dd8-a076-074844e8d5da) and start prompting.
+### Installation
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies:
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🎨 Customization
 
-**Use GitHub Codespaces**
+### Personal Information
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Update the following files with your information:
 
-## What technologies are used for this project?
+**src/components/Hero.tsx**
+- Replace placeholder text with your name and description
+- Update the call-to-action buttons
 
-This project is built with:
+**src/data/projects.ts**
+- Replace sample projects with your own
+- Update project images, descriptions, and links
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**src/data/skills.ts** 
+- Modify skills and proficiency levels
+- Add or remove skill categories
 
-## How can I deploy this project?
+**src/components/Contact.tsx**
+- Update contact information (email, phone, location)
 
-Simply open [Lovable](https://lovable.dev/projects/f25756a7-56dc-4dd8-a076-074844e8d5da) and click on Share -> Publish.
+**src/components/Footer.tsx**
+- Update social media links
 
-## Can I connect a custom domain to my Lovable project?
+### Visual Customization
 
-Yes, you can!
+**Design System (src/index.css)**
+- Modify color palette in CSS variables
+- Adjust gradients, shadows, and animations
+- All colors use HSL format for easy theming
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Profile Photo**
+- Replace `src/assets/profile-photo.jpg` with your professional headshot
+- Recommended size: 400x400px or higher
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📦 Build for Production
+
+```sh
+npm run build
+```
+
+The build folder will contain the optimized production files.
+
+## 🌐 Deployment
+
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+
+### Vercel
+1. Import your GitHub repository
+2. Vercel will auto-detect the settings
+3. Deploy with one click
+
+## 🛠 Technologies Used
+
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Vite** - Build tool
+- **React Router** - Navigation
+- **Lucide React** - Icons
+- **Radix UI** - Accessible components
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── data/               # Project and skills data
+├── pages/              # Route pages
+├── assets/             # Images and media
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── ui/                 # shadcn/ui components
+```
+
+## 🎯 SEO Features
+
+- Semantic HTML structure
+- Meta tags for social sharing
+- Descriptive alt texts for images
+- Clean URLs with React Router
+- Mobile-optimized viewport
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Ready to showcase your work?** Customize this portfolio template and make it your own!

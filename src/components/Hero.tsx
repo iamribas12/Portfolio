@@ -16,7 +16,7 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10 blur-2xl"></div>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 text-foreground">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
           Full Stack Developer
         </h1>
         

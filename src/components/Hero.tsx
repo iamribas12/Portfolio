@@ -11,9 +11,9 @@ export function Hero() {
           <img
             src={profilePhoto}
             alt="Professional headshot"
-            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-8 shadow-custom-lg hover-lift border-4 border-primary/10"
+            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-8 shadow-custom-lg hover-lift border-4 border-primary/10 animate-float"
           />
-          <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10 blur-2xl"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10 blur-2xl animate-float"></div>
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">

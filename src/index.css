@@ -144,6 +144,10 @@ All colors MUST be HSL.
     animation: scaleIn 0.4s ease-out forwards;
   }
   
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
   /* Gradient Backgrounds */
   .bg-gradient-primary {
     background: var(--gradient-primary);
@@ -239,5 +243,14 @@ All colors MUST be HSL.
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

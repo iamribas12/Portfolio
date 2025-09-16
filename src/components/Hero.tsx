@@ -17,7 +17,7 @@ export function Hero() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-          Full Stack Developer
+          AI Developer
         </h1>
         
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">

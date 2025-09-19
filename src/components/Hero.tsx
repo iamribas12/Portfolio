@@ -19,18 +19,25 @@ export function Hero() {
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
           AI Developer
         </h1>
-        
+
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          I create beautiful, responsive web applications with modern technologies. 
-          Passionate about clean code, user experience, and innovative solutions.
+          I create beautiful, responsive web applications with modern
+          technologies. Passionate about clean code, user experience, and
+          innovative solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-custom-md hover:shadow-custom-lg transition-all group">
-            <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-            Download Resume
+          <Button
+            size="lg"
+            className="bg-gradient-primary hover:opacity-90 shadow-custom-md hover:shadow-custom-lg transition-all group"
+            asChild
+          >
+            <a href="./Sabir_alam_CV.pdf" download="Sabir_alam_CV.pdf">
+              <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+              Download Resume
+            </a>
           </Button>
-          
+
           <Button asChild variant="outline" size="lg" className="hover-lift">
             <Link to="/contact">
               <Mail className="mr-2 h-4 w-4" />

@@ -6,20 +6,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@yourname.com",
-    href: "mailto:hello@yourname.com",
+    value: "sabir.ibn@gmail.com",
+    href: "mailto:sabir.ibn@gmail.com",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+91 (799) 112-2866",
+    href: "tel:+917991122866",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "San Francisco, CA",
-    href: "#",
+    value: "Kolkata, IND",
+    href: "https://maps.app.goo.gl/kp9CDmP8gCb6DhaY7",
   },
 ];
 

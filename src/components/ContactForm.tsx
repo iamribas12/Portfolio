@@ -18,9 +18,9 @@ export function ContactForm() {
 
     try {
       // Replace these with your EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_vzubshf';
+      const templateId = 'template_p6q30gq';
+      const publicKey = 'fHa7y15YXxh9jL-Rk';
 
       const result = await emailjs.sendForm(
         serviceId,

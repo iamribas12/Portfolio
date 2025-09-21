@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Clock, ExternalLink } from "lucide-react";
+import { BlogSearch } from "@/components/BlogSearch";
+import { useState } from "react";
 import reactTypescriptImage from "@/assets/blog-react-typescript.jpg";
 import cssPerformanceImage from "@/assets/blog-css-performance.jpg";
 import supabaseReactImage from "@/assets/blog-supabase-react.jpg";
@@ -39,6 +41,14 @@ const blogPosts = [
 ];
 
 export function Blog() {
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  const filteredPosts = blogPosts.filter(post =>
+    post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    post.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -46,13 +56,30 @@ export function Blog() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Latest Blog Posts
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Insights, tutorials, and thoughts on modern web development
           </p>
+          
+          {/* Search Component */}
+          <div className="flex justify-center mb-8">
+            <BlogSearch 
+              onSearch={setSearchQuery}
+              placeholder="Search articles, tags, or topics..."
+            />
+          </div>
         </div>
 
+        {/* Search Results Info */}
+        {searchQuery && (
+          <div className="mb-6 text-center">
+            <p className="text-muted-foreground">
+              {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'} found for "{searchQuery}"
+            </p>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {filteredPosts.map((post) => (
             <Card key={post.id} className="group hover-lift cursor-pointer transition-all duration-300 hover:shadow-custom-lg overflow-hidden">
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -98,6 +125,17 @@ export function Blog() {
             </Card>
           ))}
         </div>
+
+        {/* No Results */}
+        {searchQuery && filteredPosts.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-xl font-semibold mb-2">No articles found</h3>
+            <p className="text-muted-foreground">
+              Try searching with different keywords or browse all articles above.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

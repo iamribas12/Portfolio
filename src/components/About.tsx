@@ -41,7 +41,19 @@ const education = [
     school: "West Bengal University of Technology",
     location: "Kolkata, WB",
     period: "2023 - Appearing",
-    gpa: "3.7/4.0",
+    // gpa: "3.7/4.0",
+    Percentage: "75%",
+    highlights: [
+      "Magna Cum Laude Graduate",
+      "President of Computer Science Society",
+      "Winner of Annual Hackathon 2017",
+    ],
+  },
+  {
+    degree: "Higher Secondary (10+2)",
+    school: "JLSM DAV",
+    location: "Dhanbad, JH",
+    period: "2021 - 2023",
     highlights: [
       "Magna Cum Laude Graduate",
       "President of Computer Science Society",
@@ -62,9 +74,7 @@ export function About() {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            About Me
-          </h2>
+        
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I'm a passionate learner who loves creating clean, meaningful, and
             user-friendly digital experiences. I enjoy turning ideas into
@@ -166,6 +176,7 @@ export function About() {
                   </ul>
                 </CardContent> */}
               </Card>
+              
             ))}
           </div>
         </div>

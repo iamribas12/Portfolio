@@ -152,7 +152,7 @@ export function About() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-6">
+                {/* <CardContent className="pt-6">
                   <ul className="space-y-2">
                     {edu.highlights.map((highlight, idx) => (
                       <li
@@ -164,14 +164,14 @@ export function About() {
                       </li>
                     ))}
                   </ul>
-                </CardContent>
+                </CardContent> */}
               </Card>
             ))}
           </div>
         </div>
 
         {/* Certifications Section */}
-        <div className="mb-16 animate-fade-in">
+        {/* <div className="mb-16 animate-fade-in">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-4">
               Certifications & Achievements
@@ -206,7 +206,7 @@ export function About() {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Journey Section */}
         <div className="text-center animate-fade-in">

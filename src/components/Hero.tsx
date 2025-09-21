@@ -3,10 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
-export function Hero() {
+export function Hero(): JSX.Element {
+  const scrollDown = (): void => {
+    window.scrollBy({
+      top: 600, // scroll 600px down
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        {/* Profile Photo */}
         <div className="relative mb-8">
           <img
             src={profilePhoto}
@@ -16,16 +24,19 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10 blur-2xl animate-float"></div>
         </div>
 
+        {/* Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
           AI Developer
         </h1>
 
+        {/* Description */}
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
           I create beautiful, responsive web applications with modern
           technologies. Passionate about clean code, user experience, and
           innovative solutions.
         </p>
 
+        {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <Button
             size="lg"
@@ -46,8 +57,12 @@ export function Hero() {
           </Button>
         </div>
 
+        {/* Scroll Down Arrow */}
         <div className="animate-bounce">
-          <ArrowDown className="h-6 w-6 text-muted-foreground mx-auto" />
+          <ArrowDown
+            className="h-6 w-6 text-muted-foreground mx-auto cursor-pointer"
+            onClick={scrollDown}
+          />
         </div>
       </div>
     </section>

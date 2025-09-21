@@ -7,6 +7,7 @@ import {
   Calendar,
   MapPin,
   Award,
+  Brain
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,12 +21,12 @@ const skills = [
   {
     icon: Database,
     title: "Backend Development",
-    description: "Node.js, Python, PostgreSQL, MongoDB",
+    description: "Node.js, Python, PostgreSQL, Laravel",
   },
   {
-    icon: Globe,
-    title: "Web Technologies",
-    description: "REST APIs, GraphQL, WebSockets, PWAs",
+    icon: Brain,
+    title: "AI/ML Integration",
+    description: "Machine Learning models, AI-powered features, data-driven solutions",
   },
   {
     icon: Smartphone,
@@ -36,22 +37,10 @@ const skills = [
 
 const education = [
   {
-    degree: "Master of Science in Computer Science",
-    school: "Stanford University",
-    location: "Stanford, CA",
-    period: "2018 - 2020",
-    gpa: "3.8/4.0",
-    highlights: [
-      "Specialized in Software Engineering and AI",
-      "Thesis: 'Machine Learning in Web Applications'",
-      "Dean's List for Academic Excellence",
-    ],
-  },
-  {
-    degree: "Bachelor of Science in Computer Engineering",
-    school: "University of California, Berkeley",
-    location: "Berkeley, CA",
-    period: "2014 - 2018",
+    degree: "Bachelor of Computer Application",
+    school: "West Bengal University of Technology",
+    location: "Kolkata, WB",
+    period: "2023 - Appearing",
     gpa: "3.7/4.0",
     highlights: [
       "Magna Cum Laude Graduate",
@@ -154,12 +143,12 @@ export function About() {
                         <Calendar className="h-3 w-3" />
                         {edu.period}
                       </Badge>
-                      <Badge
+                      {/* <Badge
                         variant="outline"
                         className="bg-success/10 text-success border-success/20"
                       >
                         GPA: {edu.gpa}
-                      </Badge>
+                      </Badge> */}
                     </div>
                   </div>
                 </CardHeader>

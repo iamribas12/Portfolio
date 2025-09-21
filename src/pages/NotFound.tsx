@@ -11,7 +11,7 @@ const NotFound = () => {
   return (
     <div className="flex min-h-screen items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
       <div className="text-center animate-fade-in">
-        <h1 className="text-6xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">404</h1>
+        <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">404</h1>
         <p className="text-xl text-muted-foreground mb-8">Oops! The page you're looking for doesn't exist.</p>
         <Link 
           to="/" 

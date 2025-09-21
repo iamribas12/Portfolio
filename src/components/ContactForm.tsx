@@ -20,7 +20,7 @@ export function ContactForm() {
       // Replace these with your EmailJS credentials
       const serviceId = 'service_vzubshf';
       const templateId = 'template_p6q30gq';
-      const publicKey = 'fHa7y15YXxh9jL-Rk';
+      const publicKey = 'qnLByYD-sU6fwUWjb';
 
       const result = await emailjs.sendForm(
         serviceId,

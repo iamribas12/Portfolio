@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Clock, ExternalLink } from "lucide-react";
 import { BlogSearch } from "@/components/BlogSearch";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import reactTypescriptImage from "@/assets/blog-react-typescript.jpg";
 import cssPerformanceImage from "@/assets/blog-css-performance.jpg";
 import supabaseReactImage from "@/assets/blog-supabase-react.jpg";
@@ -80,7 +81,8 @@ export function Blog() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map((post) => (
-            <Card key={post.id} className="group hover-lift cursor-pointer transition-all duration-300 hover:shadow-custom-lg overflow-hidden">
+            <Link key={post.id} to={`/blog/${post.id}`}>
+              <Card className="group hover-lift cursor-pointer transition-all duration-300 hover:shadow-custom-lg overflow-hidden h-full">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={post.heroImage} 
@@ -123,6 +125,7 @@ export function Blog() {
                 </div>
               </CardContent>
             </Card>
+            </Link>
           ))}
         </div>
 

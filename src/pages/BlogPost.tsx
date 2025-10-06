@@ -63,7 +63,7 @@ export default function BlogPost() {
         </Button>
 
         {/* Hero Image */}
-        <div className="relative h-[400px] rounded-xl overflow-hidden mb-8 shadow-custom-lg">
+        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[400px] rounded-xl overflow-hidden mb-6 sm:mb-8 shadow-custom-lg">
           <img
             src={post.heroImage}
             alt={post.title}
@@ -82,11 +82,11 @@ export default function BlogPost() {
             ))}
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             {post.title}
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-6">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6">
             {post.description}
           </p>
 
@@ -117,49 +117,51 @@ export default function BlogPost() {
           </div>
 
           {/* Social Share Buttons */}
-          <div className="flex items-center gap-3 pt-6 border-t border-border">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-4 sm:pt-6 border-t border-border">
             <span className="text-sm text-muted-foreground font-medium">Share:</span>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handleShare("twitter")}
-              className="gap-2"
-            >
-              <Twitter className="h-4 w-4" />
-              Twitter
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handleShare("linkedin")}
-              className="gap-2"
-            >
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handleShare("facebook")}
-              className="gap-2"
-            >
-              <Facebook className="h-4 w-4" />
-              Facebook
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handleShare("copy")}
-              className="gap-2"
-            >
-              <Share2 className="h-4 w-4" />
-              Copy Link
-            </Button>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleShare("twitter")}
+                className="gap-1.5 sm:gap-2 text-xs sm:text-sm"
+              >
+                <Twitter className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">Twitter</span>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleShare("linkedin")}
+                className="gap-1.5 sm:gap-2 text-xs sm:text-sm"
+              >
+                <Linkedin className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">LinkedIn</span>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleShare("facebook")}
+                className="gap-1.5 sm:gap-2 text-xs sm:text-sm"
+              >
+                <Facebook className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">Facebook</span>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleShare("copy")}
+                className="gap-1.5 sm:gap-2 text-xs sm:text-sm"
+              >
+                <Share2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">Copy</span>
+              </Button>
+            </div>
           </div>
         </header>
 
         {/* Article Content */}
-        <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
+        <div className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none mb-8 sm:mb-12">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {post.content}
           </ReactMarkdown>

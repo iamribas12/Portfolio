@@ -3,6 +3,7 @@ import { About } from "@/components/About";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import { MiniBlog } from "@/components/MiniBlog";
+import { MiniTutorials } from "@/components/MiniTutorials";
 import { Contact } from "@/components/Contact";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <MiniBlog />
+      <MiniTutorials />
       <Contact />
     </main>
   );

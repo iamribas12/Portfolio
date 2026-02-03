@@ -25,12 +25,9 @@ export function Hero(): JSX.Element {
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-          Sabir
-        </h1>
-        <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary/80 mb-6">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
           AI Developer
-        </p>
+        </h1>
 
         {/* Description */}
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">

@@ -2,14 +2,37 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, ArrowRight } from "lucide-react";
-import { BlogSearch } from "@/components/BlogSearch";
-import { getFeaturedPosts } from "@/data/blogData";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { BlogSearch } from "@/components/BlogSearch";
+import { useState } from "react";
+import reactTypescriptImage from "@/assets/blog-react-typescript.jpg";
+import cssPerformanceImage from "@/assets/blog-css-performance.jpg";
+
+const featuredPosts = [
+  {
+    id: 1,
+    title: "Building Scalable React Applications with TypeScript",
+    description: "Learn how to structure large React applications using TypeScript for better maintainability.",
+    date: "2024-03-15",
+    readTime: "8 min read",
+    tags: ["React", "TypeScript"],
+    excerpt: "Discover best practices for building scalable React applications that can grow with your team.",
+    heroImage: reactTypescriptImage
+  },
+  {
+    id: 2,
+    title: "Modern CSS Techniques for Better Web Performance",
+    description: "Explore advanced CSS features like container queries and CSS grid for performant websites.",
+    date: "2024-03-10",
+    readTime: "6 min read",
+    tags: ["CSS", "Performance"],
+    excerpt: "Modern CSS offers powerful tools that can significantly improve development experience.",
+    heroImage: cssPerformanceImage
+  }
+];
 
 export function MiniBlog() {
   const [searchQuery, setSearchQuery] = useState("");
-  const featuredPosts = getFeaturedPosts();
   
   const filteredPosts = featuredPosts.filter(post =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -40,8 +63,7 @@ export function MiniBlog() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {filteredPosts.map((post) => (
-            <Link key={post.id} to={`/blog/${post.id}`}>
-              <Card className="group hover-lift cursor-pointer transition-all duration-300 overflow-hidden h-full">
+            <Card key={post.id} className="group hover-lift cursor-pointer transition-all duration-300 overflow-hidden">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={post.heroImage} 
@@ -81,7 +103,6 @@ export function MiniBlog() {
                 </div>
               </CardContent>
             </Card>
-            </Link>
           ))}
         </div>
 
